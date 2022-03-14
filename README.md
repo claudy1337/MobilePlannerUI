@@ -3,7 +3,7 @@ MobilePlanner
 
 DATA BASE
 ===========
-**sqllite**
+visual bd
 
 | Planner | Info |
 |----------------|---------|
