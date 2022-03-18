@@ -73,30 +73,28 @@
                                             <TapGestureRecognizer Tapped="PropertySelected"/>
                                         </Grid.GestureRecognizers>
                                         <Image HeightRequest="115" Aspect="AspectFill" Source="{Binding Image}" st:Transition.Name="PropertyImage"/>
-                                        <Image Source="bookmark.png" HorizontalOptions="End" Margin="12" HeightRequest="16" VerticalOptions="Start"/>
+                                        <Image Source="star.png" HorizontalOptions="End" Margin="12" HeightRequest="16" VerticalOptions="Start"/>
                                         <Grid VerticalOptions="End" Margin="15">
-                                            <pv:PancakeView CornerRadius="13" Padding="15,5" BackgroundColor="Black" Opacity="0.5" 
+                                            <pv:PancakeView CornerRadius="13" Padding="15,5" BackgroundColor="Black" Opacity="0.75" 
                                                     HorizontalOptions="Start" VerticalOptions="Start">
                                                 <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Start">
-                                                    <Image HeightRequest="12" WidthRequest="12" Source="location.png" VerticalOptions="Center" HorizontalOptions="Start"/>
-                                                    <Label Text="{Binding Location}" FontSize="12" TextColor="White" FontFamily="ThemeFontRegular" VerticalOptions="Center"/>
+                                                    <Image HeightRequest="12" WidthRequest="12" Source="actual.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                                    <Label Text="{Binding Actualling}" FontSize="12" TextColor="White" FontFamily="ThemeFontRegular" VerticalOptions="Center"/>
                                                 </StackLayout>
                                             </pv:PancakeView>
                                         </Grid>
+                                        
                                         <StackLayout Grid.Row="1" Spacing="5" Margin="20,5">
-                                            <Label Text="{Binding Price}" FontSize="15" FontFamily="ThemeFontBold" TextColor="#515151"/>
+                                            <Label Text="{Binding Name}" FontSize="15" FontFamily="ThemeFontBold" TextColor="#515151"/>
                                             <StackLayout Orientation="Horizontal" Spacing="15">
                                                 <StackLayout Orientation="Horizontal" Spacing="10">
-                                                    <Image WidthRequest="16" Source="bed.png"/>
-                                                    <Label Text="{Binding Bed}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
+                                                    <Image WidthRequest="30" Source="date.png"/>
+                                                    <Label Text="{Binding Date}" FontSize="12" FontFamily="ThemeFontRegular" Margin="0,5,0,0" TextColor="#707070"/>
                                                 </StackLayout>
+                                                
                                                 <StackLayout Orientation="Horizontal" Spacing="10">
-                                                    <Image WidthRequest="16" Source="shower.png"/>
-                                                    <Label Text="{Binding Bath}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
-                                                </StackLayout>
-                                                <StackLayout Orientation="Horizontal" Spacing="10">
-                                                    <Image WidthRequest="16" Source="square.png"/>
-                                                    <Label Text="{Binding Space}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
+                                                    <Image WidthRequest="26" Source="more.png"/>
+                                                    <Label Text="{Binding Bed}" FontSize="12" Margin="0,5,0,0" FontFamily="ThemeFontRegular" TextColor="#707070"/>
                                                 </StackLayout>
                                             </StackLayout>
                                         </StackLayout>
@@ -111,7 +109,7 @@
 
 
             <!--Last Main Menu Navigation-->
-            <Grid x:Name="MainMenuView" BackgroundColor="#221F33" HeightRequest="500" 
+            <Grid x:Name="MainMenuView" BackgroundColor="#29292A" HeightRequest="400" 
               VerticalOptions="Start" AnchorX="0.08" AnchorY="0.08" Rotation="-90">
                 <Grid AnchorX="0.08" AnchorY="0.08" Rotation="90">
                     <StackLayout Orientation="Horizontal" Spacing="20">
@@ -122,16 +120,15 @@
                     </StackLayout>
                 </Grid>
                 <Grid x:Name="MenuItemsView" Grid.Column="1" HorizontalOptions="FillAndExpand" TranslationX="-50" Opacity="0">
-                    <StackLayout Margin="0,70,0,0" Spacing="20" BindableLayout.ItemsSource="{Binding MenuItems}">
+                    <StackLayout VerticalOptions="Center" Spacing="20" BindableLayout.ItemsSource="{Binding MenuItems}" HorizontalOptions="Start">
+                        
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Orientation="Horizontal" Spacing="20">
+                                <StackLayout Orientation="Horizontal" Spacing="20" >
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="MenuTapped"/>
                                     </StackLayout.GestureRecognizers>
-                                    <Image Source="{Binding Icon}" WidthRequest="20" HeightRequest="20" 
-                                    VerticalOptions="Center" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding Title}" TextColor="White" FontSize="22" FontAttributes="Bold" 
+                                    <Label Text="{Binding Title}" TextColor="White" FontSize="22" FontFamily="Ubuntu Medium" 
                                     HorizontalOptions="Start" VerticalOptions="Center"/>
                                 </StackLayout>
                             </DataTemplate>

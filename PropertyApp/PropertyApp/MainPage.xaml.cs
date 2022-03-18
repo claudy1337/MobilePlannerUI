@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
+using System.Data;
+using System.Timers;
 
 
 namespace PropertyApp
@@ -36,15 +38,15 @@ namespace PropertyApp
                 new PropertyType { TypeName = "Value 5" }
             };
         }
-
+        DateTime someDate = new DateTime(2022, 3, 18);
         private List<Property> GetProperties()
         {
             return new List<Property>
             {
-                new Property { Image = "win.png", Address = "2162 Patricia Ave, LA", Location = "Califonia", Price = "$1500/mo", Bed = "4 Bed", Bath = "3 Bath", Space = "1600 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt2.png", Address = "2168 Cushions Dr, LA", Location = "Califonia", Price = "$1000/mo", Bed = "3 Bed", Bath = "1 Bath", Space = "1100 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png", Address = "2112 Anthony Way, LA", Location = "Califonia", Price = "$900/mo", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png", Address = "2112 Anthony Way, LA", Location = "Califonia", Price = "$900/mo", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" }
+                new Property { Image = "win.png", Name = "Aboba" , Address = "2162 Patricia Ave, LA", Actualling = "Actual", Date = someDate, Bed = "detailed",  Space = "1600 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "apt2.png", Name = "BOBA", Address = "2168 Cushions Dr, LA", Actualling = "Actual", Date = someDate, Bed = "detailed", Space = "1100 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "apt3.png", Name= "BirthDay" ,Address = "2112 Anthony Way, LA", Actualling = "Actual", Date = someDate, Bed = "detailed",  Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "apt3.png",Name = "DeadDay" , Address = "2112 Anthony Way, LA", Actualling = "Actual", Date = someDate, Bed = "detailed", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" }
             };
         }
 
@@ -84,10 +86,10 @@ namespace PropertyApp
         {
             return new ObservableCollection<Menu>
             {
-                new Menu { Title = "PROFILE", Icon = "authors.png" },
-                new Menu { Title = "FEED", Icon = "feed.png" },
-                new Menu { Title = "ACTIVITY", Icon = "activity.png" },
-                new Menu { Title = "SETTINGS", Icon = "settings.png" }
+                new Menu { Title = "PLAN"},
+                new Menu { Title = "NEW"},
+                new Menu { Title = "TIME"},
+                new Menu { Title = "AUTHOR"}
             };
         }
 
@@ -127,7 +129,7 @@ namespace PropertyApp
     public class Menu
     {
         public string Title { get; set; }
-        public string Icon { get; set; }
+        
     }
 
     public class Property
@@ -136,10 +138,10 @@ namespace PropertyApp
         public string PropertyName { get; set; }
         public string Image { get; set; }
         public string Address { get; set; }
-        public string Location { get; set; }
-        public string Price { get; set; }
+        public string Actualling { get; set; }
+        public DateTime Date { get; set; }
         public string Bed { get; set; }
-        public string Bath { get; set; }
+        public string Name { get; set; }
         public string Space { get; set; }
         public string Details { get; set; }
     }
