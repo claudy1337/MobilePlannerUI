@@ -9,8 +9,9 @@ namespace MobilePlannerUI
         public App()
         {
             InitializeComponent();
-
+            Device.SetFlags(new[] { "Expander_Experimental" });
             MainPage = new MainPage();
+            
         }
 
         protected override void OnStart()
