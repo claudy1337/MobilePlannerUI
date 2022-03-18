@@ -1,15 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using MobilePlanner.Application.Interfaces;
+using MobilePlanner.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
+//(builder.Configuration.GetConnectionString("PlannerConnection")))
+var connection = builder.Configuration.GetConnectionString("PlannerConnection");
+builder.Services.AddDbContext<PlannerDBContext>(opt => opt.
+    UseSqlServer(connection,builder => builder.MigrationsAssembly("MobilePlanner.WebApi")));
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IPlannerRepository, MockPlannerRepository>();
+
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
