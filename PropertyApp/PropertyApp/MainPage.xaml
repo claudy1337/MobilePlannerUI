@@ -113,7 +113,7 @@
               VerticalOptions="Start" AnchorX="0.08" AnchorY="0.08" Rotation="-90">
                 <Grid AnchorX="0.08" AnchorY="0.08" Rotation="90">
                     <StackLayout Orientation="Horizontal" Spacing="20">
-                        <ImageButton Source="menu.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" 
+                        <ImageButton Source="actual.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" 
                             VerticalOptions="Start" HorizontalOptions="Center" Margin="0,5,0,0" Clicked="ShowMenu"/>
                         <Label x:Name="TitleTxt" Text="PLAN" TextColor="White" FontSize="22" FontAttributes="Bold" 
                         HorizontalOptions="Center" VerticalOptions="Start"/>

@@ -43,10 +43,10 @@ namespace PropertyApp
         {
             return new List<Property>
             {
-                new Property { Image = "win.png", Name = "Aboba" , Address = "2162 Patricia Ave, LA", Actualling = "Actual", Date = someDate, Bed = "detailed",  Space = "1600 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt2.png", Name = "BOBA", Address = "2168 Cushions Dr, LA", Actualling = "Actual", Date = someDate, Bed = "detailed", Space = "1100 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png", Name= "BirthDay" ,Address = "2112 Anthony Way, LA", Actualling = "Actual", Date = someDate, Bed = "detailed",  Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png",Name = "DeadDay" , Address = "2112 Anthony Way, LA", Actualling = "Actual", Date = someDate, Bed = "detailed", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" }
+                new Property { Image = "win.png", Name = "Aboba" , Actualling = "Actual", Date = someDate, Bed = "detailed",   Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "apt2.png", Name = "BOBA", Actualling = "Actual", Date = someDate, Bed = "detailed",  Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "apt3.png", Name= "BirthDay" , Actualling = "Actual", Date = someDate, Bed = "detailed", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "apt3.png",Name = "DeadDay" , Actualling = "Actual", Date = someDate, Bed = "detailed", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" }
             };
         }
 
@@ -137,12 +137,10 @@ namespace PropertyApp
         public string Id => Guid.NewGuid().ToString("N");
         public string PropertyName { get; set; }
         public string Image { get; set; }
-        public string Address { get; set; }
         public string Actualling { get; set; }
         public DateTime Date { get; set; }
         public string Bed { get; set; }
         public string Name { get; set; }
-        public string Space { get; set; }
         public string Details { get; set; }
     }
 }
