@@ -37,9 +37,7 @@
                                                         <Setter Property="BackgroundGradientStops">
                                                             <Setter.Value>
                                                                 <pv:GradientStopCollection>
-                                                                    <pv:GradientStop Color="#FF4157" Offset="0" />
-                                                                    <pv:GradientStop Color="#FF4359" Offset="0.5" />
-                                                                    <pv:GradientStop Color="#FE93C5" Offset="1" />
+                                                                   
                                                                 </pv:GradientStopCollection>
                                                             </Setter.Value>
                                                         </Setter>
@@ -109,13 +107,13 @@
 
 
             <!--Last Main Menu Navigation-->
-            <Grid x:Name="MainMenuView" BackgroundColor="#29292A" HeightRequest="400" 
+            <Grid x:Name="MainMenuView" BackgroundColor="#29292A" HeightRequest="500" 
               VerticalOptions="Start" AnchorX="0.08" AnchorY="0.08" Rotation="-90">
                 <Grid AnchorX="0.08" AnchorY="0.08" Rotation="90">
                     <StackLayout Orientation="Horizontal" Spacing="20">
-                        <ImageButton Source="actual.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" 
+                        <ImageButton Source="layers.png" BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30" 
                             VerticalOptions="Start" HorizontalOptions="Center" Margin="0,5,0,0" Clicked="ShowMenu"/>
-                        <Label x:Name="TitleTxt" Text="PLAN" TextColor="White" FontSize="22" FontAttributes="Bold" 
+                        <Label x:Name="TitleTxt" Text="PLAN" Margin="0,5,0,0" TextColor="White" FontSize="22" FontAttributes="Bold" 
                         HorizontalOptions="Center" VerticalOptions="Start"/>
                     </StackLayout>
                 </Grid>

@@ -34,8 +34,7 @@ namespace PropertyApp
                 new PropertyType { TypeName = "Value 1" },
                 new PropertyType { TypeName = "Value 2" },
                 new PropertyType { TypeName = "Value 3" },
-                new PropertyType { TypeName = "Value 4" },
-                new PropertyType { TypeName = "Value 5" }
+                new PropertyType { TypeName = "Value 4" }
             };
         }
         DateTime someDate = new DateTime(2022, 3, 18);
@@ -44,9 +43,11 @@ namespace PropertyApp
             return new List<Property>
             {
                 new Property { Image = "win.png", Name = "Aboba" , Actualling = "Actual", Date = someDate, Bed = "detailed",   Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt2.png", Name = "BOBA", Actualling = "Actual", Date = someDate, Bed = "detailed",  Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png", Name= "BirthDay" , Actualling = "Actual", Date = someDate, Bed = "detailed", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png",Name = "DeadDay" , Actualling = "Actual", Date = someDate, Bed = "detailed", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" }
+                new Property { Image = "win.png", Name = "Aboba" , Actualling = "Actual", Date = someDate, Bed = "detailed",   Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "win.png", Name = "Aboba" , Actualling = "Actual", Date = someDate, Bed = "detailed",   Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "win.png", Name = "Aboba" , Actualling = "Actual", Date = someDate, Bed = "detailed",   Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Property { Image = "win.png", Name = "Aboba" , Actualling = "Actual", Date = someDate, Bed = "detailed",   Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" }
+                
             };
         }
 
