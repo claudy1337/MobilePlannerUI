@@ -23,24 +23,24 @@
                 <StackLayout Spacing="15" HorizontalOptions="FillAndExpand">
                     <Grid HorizontalOptions="FillAndExpand">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
-                            
+
                             <StackLayout Orientation="Vertical">
                                 <Label Text="{Binding Property.Name}" FontSize="35" TextColor="Black" FontFamily="ThemeFontRegular" HorizontalOptions="Start" VerticalOptions="Center"/>
                                 <Label Text="{Binding Property.Date}" FontSize="15" TextColor="Black" FontFamily="ThemeFontRegular" HorizontalOptions="Start" VerticalOptions="Center"/>
-                                
+
                             </StackLayout>
-                            
+
                         </StackLayout>
                         <ImageButton BackgroundColor="Transparent" Aspect="Fill" HeightRequest="30" WidthRequest="30" Source="actual.png" VerticalOptions="Center" HorizontalOptions="End"/>
                     </Grid>
                     <StackLayout Grid.Row="1" Spacing="10" >
-                        
+
                         <StackLayout Orientation="Horizontal" Spacing="15">
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image WidthRequest="36" Source="notification.png"/>
                                 <Label Text="Notification" Margin="0,5,0,0" FontSize="17" FontFamily="ThemeFontRegular" TextColor="#707070"/>
                             </StackLayout>
-                            
+
                         </StackLayout>
                     </StackLayout>
                     <BoxView HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="#E4E4E4"/>
@@ -53,7 +53,7 @@
                         </StackLayout>
                         <StackLayout>
                             <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
-                                <Image Aspect="AspectFill" Source="edit.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Image HeightRequest="50" WidthRequest="50" Source="edit.png" HorizontalOptions="Center" VerticalOptions="Center"/>
                             </pv:PancakeView>
                             <Label Text="Edit" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
                         </StackLayout>

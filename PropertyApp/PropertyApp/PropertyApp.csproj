@@ -37,9 +37,4 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Fonts\Ubuntu\" />
-    <Folder Include="Fonts\Druk\" />
-  </ItemGroup>
 </Project>

@@ -15,6 +15,7 @@ namespace PropertyApp
             InitializeComponent();
 
             MainPage = new SharedTransitionNavigationPage(new MainPage());
+           
         }
 
         protected override void OnStart()

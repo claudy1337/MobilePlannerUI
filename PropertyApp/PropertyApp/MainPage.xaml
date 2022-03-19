@@ -110,14 +110,15 @@
             <Grid x:Name="MainMenuView" BackgroundColor="#29292A" HeightRequest="500" 
               VerticalOptions="Start" AnchorX="0.08" AnchorY="0.08" Rotation="-90">
                 <Grid AnchorX="0.08" AnchorY="0.08" Rotation="90">
-                    <StackLayout Orientation="Horizontal" Spacing="20">
+                    
+                    <StackLayout Orientation="Horizontal" Spacing="20" >
                         <ImageButton Source="layers.png" BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30" 
                             VerticalOptions="Start" HorizontalOptions="Center" Margin="0,5,0,0" Clicked="ShowMenu"/>
                         <Label x:Name="TitleTxt" Text="PLAN" Margin="0,5,0,0" TextColor="White" FontSize="22" FontAttributes="Bold" 
                         HorizontalOptions="Center" VerticalOptions="Start"/>
                     </StackLayout>
                 </Grid>
-                <Grid x:Name="MenuItemsView" Grid.Column="1" HorizontalOptions="FillAndExpand" TranslationX="-50" Opacity="0">
+                <Grid x:Name="MenuItemsView" Grid.Column="1" HorizontalOptions="FillAndExpand" TranslationX="-50" Opacity="0" >
                     <StackLayout VerticalOptions="Center" Spacing="20" BindableLayout.ItemsSource="{Binding MenuItems}" HorizontalOptions="Start">
                         
                         <BindableLayout.ItemTemplate>
