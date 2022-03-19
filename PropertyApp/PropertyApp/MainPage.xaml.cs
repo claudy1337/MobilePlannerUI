@@ -19,7 +19,6 @@ namespace PropertyApp
         public MainPage()
         {
             InitializeComponent();
-            
             MenuItems = GetMenus();
             this.BindingContext = this;
         }

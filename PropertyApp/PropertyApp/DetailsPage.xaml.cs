@@ -32,5 +32,10 @@ namespace PropertyApp
             DetailsView.TranslationY = 600;
             DetailsView.TranslateTo(0, 0, 500, Easing.SinInOut);
         }
+
+        private async void ImgAddPlann(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CreatePlan(Property));
+        }
     }
 }

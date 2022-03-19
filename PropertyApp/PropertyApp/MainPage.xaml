@@ -46,7 +46,7 @@
                                                 </VisualState>
                                             </VisualStateGroup>
                                         </VisualStateManager.VisualStateGroups>
-                                        <Label x:Name="PropertyTypeName" Padding="20,5" Text="{Binding TypeName}" TextColor="#707070" FontSize="15" FontFamily="ThemeFontRegular"/>
+                                        <Label x:Name="PropertyTypeName" Padding="20,5" Text="{Binding TypeName}" FontFamily="Ubuntu-Medium.ttf" TextColor="#707070" FontSize="15"/>
                                     </pv:PancakeView>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>

@@ -47,13 +47,17 @@
                     <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
                         <StackLayout>
                             <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
-                                <Image WidthRequest="50" HeightRequest="50" Source="add.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Image WidthRequest="50" HeightRequest="50" Source="add.png" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ImgAddPlann"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </pv:PancakeView>
                             <Label Text="New" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
                         </StackLayout>
                         <StackLayout>
                             <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
-                                <Image HeightRequest="50" WidthRequest="50" Source="edit.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Image HeightRequest="60" WidthRequest="60" Source="edit.png" HorizontalOptions="Center" VerticalOptions="Center"/>
                             </pv:PancakeView>
                             <Label Text="Edit" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
                         </StackLayout>
@@ -76,15 +80,6 @@
                 </StackLayout>
             </ScrollView>
         </pv:PancakeView>
-        <pv:PancakeView Grid.Row="2" HeightRequest="50" BackgroundGradientAngle="270">
-            <pv:PancakeView.BackgroundGradientStops>
-                <pv:GradientStopCollection>
-                    <pv:GradientStop Color="#29292A" Offset="0" />
-                    <pv:GradientStop Color="#535358" Offset="0.5" />
-                    <pv:GradientStop Color="#78867E" Offset="1" />
-                </pv:GradientStopCollection>
-            </pv:PancakeView.BackgroundGradientStops>
-            <Label Text="Close" TextColor="White" FontSize="15" FontFamily="ThemeFontBold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-        </pv:PancakeView>
+        
     </Grid>
 </ContentPage>
