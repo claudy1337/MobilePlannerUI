@@ -127,7 +127,8 @@
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="MenuTapped"/>
                                     </StackLayout.GestureRecognizers>
-                                    <Label Text="{Binding Title}" TextColor="White" FontSize="22" FontFamily="Ubuntu Medium" 
+                                   
+                                    <Label Text="{Binding Title}" TextColor="White" FontSize="22" FontFamily="Druk.ttf" 
                                     HorizontalOptions="Start" VerticalOptions="Center"/>
                                 </StackLayout>
                             </DataTemplate>
