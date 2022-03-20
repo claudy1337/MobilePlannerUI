@@ -86,10 +86,10 @@ namespace PropertyApp
         {
             return new ObservableCollection<Menu>
             {
-                new Menu { Title = "PLAN"},
-                new Menu { Title = "NEW"},
-                new Menu { Title = "TIME"},
-                new Menu { Title = "AUTHOR"}
+                new Menu { Title = "PLAN", imgMenu = "file.png"},
+                new Menu { Title = "NEW", imgMenu = "create.png" },
+                new Menu { Title = "TIME" , imgMenu = "time.png"},
+                new Menu { Title = "AUTHOR", imgMenu = "group.png"}
             };
         }
 
@@ -129,7 +129,9 @@ namespace PropertyApp
     public class Menu
     {
         public string Title { get; set; }
-        
+        public string imgMenu { get; set; }
+
+
     }
 
     public class Property
