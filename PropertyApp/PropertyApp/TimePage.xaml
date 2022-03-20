@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertyApp.TimePage"
+             BackgroundImageSource="timeSetting.png"
+             NavigationPage.HasNavigationBar="False">
+    
+    <AbsoluteLayout x:Name="absoluteLayout"
+                    SizeChanged="OnAbsoluteLayoutSizeChanged">
+
+        <BoxView x:Name="hourHand"
+                 Color="White" />
+
+        <BoxView x:Name="minuteHand"
+                 Color="White" />
+
+        <BoxView x:Name="secondHand"
+                 Color="White" />
+        <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="back.png" Margin="25" WidthRequest="20" HeightRequest="13" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
+        <Label Text="12:12:12" FontSize="32" TextColor="white" Margin="135,150,100,0"/>
+        <Button BackgroundColor="White"
+                HeightRequest="50"
+                WidthRequest="280"
+                HorizontalOptions="Center"
+                CornerRadius="16"
+                Opacity="0.8"
+                Margin="60,600,60,0"
+                TextColor="Black"
+                FontFamily="Ubuntu-Regular.ttf"
+                x:Name="SetTimer"
+                Clicked="SetTimer_Clicked"
+                Text="Setting Time"
+                FontSize="22"/>
+    </AbsoluteLayout>
+    
+</ContentPage>

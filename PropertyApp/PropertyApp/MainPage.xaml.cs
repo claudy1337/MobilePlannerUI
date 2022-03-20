@@ -122,6 +122,10 @@ namespace PropertyApp
             }
             else if (TitleTxt.Text == "AUTHOR")
             {
+                await Navigation.PushAsync(new TimePage());
+            }
+            else if (TitleTxt.Text == "")
+            {
                 await Navigation.PushAsync(new AuthorPage());
             }
             else
