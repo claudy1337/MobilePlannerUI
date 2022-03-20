@@ -4,39 +4,44 @@
              x:Class="PropertyApp.CreatePlan"
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:st="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
-              NavigationPage.HasNavigationBar="False">
+             BackgroundImageSource="Plancreate.png"
+             NavigationPage.HasNavigationBar="False">
     
-    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <Grid>
+       
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.2*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition />
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-
-        <Image Aspect="AspectFill"  Source="createPlan.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" st:Transition.Name="PropertyImage"/>
         <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="back.png" Margin="25" WidthRequest="20" HeightRequest="13" 
                      HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
-        <pv:PancakeView x:Name="DetailsView" Grid.Row="1" CornerRadius="30,30,0,0" Padding="35,35,35,0" Margin="0,-50,0,0" 
+        <StackLayout Grid.Row="1">
+            <pv:PancakeView Opacity="0.9" x:Name="DetailsView" CornerRadius="30" Margin="20,0,20,0" Padding="20,20,20,0" 
                         BackgroundColor="White" VerticalOptions="FillAndExpand">
-            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
-                <StackLayout Spacing="15" HorizontalOptions="FillAndExpand">
-                    
 
-                </StackLayout>
-            </ScrollView>
-        </pv:PancakeView>
-        <Button HeightRequest="60" BackgroundColor="#535358" Text="Create" TextColor="White" FontFamily="Ubuntu-Medium.ttf" WidthRequest="100" Grid.Row="2"/>
-        <!--
-        <pv:PancakeView Grid.Row="2" HeightRequest="50" BackgroundGradientAngle="270">
-            <pv:PancakeView.BackgroundGradientStops>
-                <pv:GradientStopCollection>
-                    <pv:GradientStop Color="#29292A" Offset="0" />
-                    <pv:GradientStop Color="#535358" Offset="0.5" />
-                    <pv:GradientStop Color="#78867E" Offset="1" />
-                </pv:GradientStopCollection>
-            </pv:PancakeView.BackgroundGradientStops>
-            <Label Text="Close" TextColor="White" FontSize="15" FontFamily="ThemeFontBold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-        </pv:PancakeView>
-        -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" HorizontalOptions="Start">
+                        <Image Source="folder.png" />
+                    </StackLayout>
+                    
+                    <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start">
+                       
+                    </StackLayout>
+                    
+                    <StackLayout Grid.Row="2" VerticalOptions="End" Margin="0,0,0,30">
+                        <Button BackgroundColor="#87704F" CornerRadius="16" Text="Create" FontSize="20" TextColor="White"/>
+                    </StackLayout>
+                    
+                </Grid>
+            </pv:PancakeView>
+        </StackLayout>
     </Grid>
+    
 </ContentPage>

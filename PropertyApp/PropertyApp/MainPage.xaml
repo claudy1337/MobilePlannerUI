@@ -107,7 +107,7 @@
 
 
             <!--Last Main Menu Navigation-->
-            <Grid x:Name="MainMenuView" BackgroundColor="#29292A" HeightRequest="400" 
+            <Grid x:Name="MainMenuView" BackgroundColor="#29292A" HeightRequest="420" 
               VerticalOptions="Start" AnchorX="0.08" AnchorY="0.08" Rotation="-90">
                 <Grid AnchorX="0.08" AnchorY="0.08" Rotation="90">
                     

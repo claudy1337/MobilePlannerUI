@@ -12,24 +12,13 @@ namespace PropertyApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreatePlan : ContentPage
     {
-        public CreatePlan(Property property)
+        public CreatePlan()
         {
-            InitializeComponent();
-            this.Property = property;
-            this.BindingContext = this;
-        }
-        public Property Property { get; set; }
-
+            InitializeComponent();                    }
         private void GoBack(object sender, EventArgs e)
         {
             this.Navigation.PopAsync();
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            DetailsView.TranslationY = 600;
-            DetailsView.TranslateTo(0, 0, 500, Easing.SinInOut);
-        }
     }
 }

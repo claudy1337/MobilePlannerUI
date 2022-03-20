@@ -112,10 +112,22 @@ namespace PropertyApp
             Show();
         }
 
-        private void MenuTapped(object sender, EventArgs e)
+        private async void MenuTapped(object sender, EventArgs e)
         {
             TitleTxt.Text = ((sender as StackLayout).BindingContext as Menu).Title;
             Hide();
+            if (TitleTxt.Text == "NEW")
+            {
+                await Navigation.PushAsync(new CreatePlan());
+            }
+            else if (TitleTxt.Text == "AUTHOR")
+            {
+                await Navigation.PushAsync(new AuthorPage());
+            }
+            else
+            {
+                TitleTxt.Text = "PLAN";
+            }
         }
 
 

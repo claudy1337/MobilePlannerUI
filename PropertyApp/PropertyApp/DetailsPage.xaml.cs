@@ -35,7 +35,7 @@ namespace PropertyApp
 
         private async void ImgAddPlann(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CreatePlan(Property));
+            await Navigation.PushAsync(new CreatePlan());
         }
     }
 }
