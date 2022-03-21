@@ -23,7 +23,7 @@ namespace MobilePlanner.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Planner> GetPlannerById([FromBody] int id)
+        public ActionResult<Planner> GetPlannerById(int id)
         {
             var plan = _plannerRepository.GetPlannerById(id);
 

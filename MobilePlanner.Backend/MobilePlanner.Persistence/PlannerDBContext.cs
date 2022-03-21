@@ -10,6 +10,6 @@ namespace MobilePlanner.Persistence
 
         }
 
-        DbSet<Planner> Planners{ get; set; }
+        public DbSet<Planner> Planners{ get; set; }
     }
 }
