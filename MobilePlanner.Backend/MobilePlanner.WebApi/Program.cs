@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MobilePlanner.Application.Interfaces;
 using MobilePlanner.Persistence;
+using MobilePlanner.WebApi.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 var connection = builder.Configuration.GetConnectionString("PlannerConnection");
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<PlannerDBContext>(opt => opt.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(PlannerProfile));
 builder.Services.AddScoped<IPlannerRepository, PlannerRepository>();
 
 

@@ -4,7 +4,9 @@ namespace MobilePlanner.Application.Interfaces
 {
     public interface IPlannerRepository
     {
+        void SaveChanges();
         IEnumerable<Planner> GetAllPlanners();
-        Planner GetPlannerById(int id); 
+        Planner GetPlannerById(int id);
+        void CreatePlanner(Planner planner);
     }
 }

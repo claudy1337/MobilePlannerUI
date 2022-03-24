@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastracture", "Infrastra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8499C2E9-EF62-411B-9208-8B08C22176B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePlanner.Domain", "MobilePlanner.Domain\MobilePlanner.Domain.csproj", "{E2A7BF97-3780-4B05-B96E-CFA53754670E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobilePlanner.Domain", "MobilePlanner.Domain\MobilePlanner.Domain.csproj", "{E2A7BF97-3780-4B05-B96E-CFA53754670E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePlanner.Application", "MobilePlanner.Application\MobilePlanner.Application.csproj", "{E7EF1909-0335-4F8F-8957-BB54E7B3B04F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobilePlanner.Application", "MobilePlanner.Application\MobilePlanner.Application.csproj", "{E7EF1909-0335-4F8F-8957-BB54E7B3B04F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePlanner.Persistence", "MobilePlanner.Persistence\MobilePlanner.Persistence.csproj", "{63B8F8C5-9362-4A29-BD13-AA81DD421D7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobilePlanner.Persistence", "MobilePlanner.Persistence\MobilePlanner.Persistence.csproj", "{63B8F8C5-9362-4A29-BD13-AA81DD421D7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePlanner.WebApi", "MobilePlanner.WebApi\MobilePlanner.WebApi.csproj", "{F161FDE3-764A-4E30-B6DB-E53108CCB1BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobilePlanner.WebApi", "MobilePlanner.WebApi\MobilePlanner.WebApi.csproj", "{F161FDE3-764A-4E30-B6DB-E53108CCB1BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
