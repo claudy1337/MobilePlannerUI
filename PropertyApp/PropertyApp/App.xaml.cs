@@ -14,7 +14,7 @@ namespace PropertyApp
         {
             InitializeComponent();
 
-            MainPage = new SharedTransitionNavigationPage(new MainPage());
+            MainPage = new SharedTransitionNavigationPage(new AuthorPage());
            
         }
 

@@ -16,10 +16,16 @@ namespace PropertyApp
         {
             InitializeComponent();  
         }
-        private void GoBack(object sender, EventArgs e)
+        private void imgAuthor(object sender, EventArgs e)
         {
-            this.Navigation.PopAsync();
+            DisplayAlert("Author", "K+ RAVIL \nADLER BACKEND \nKISLOTNY", "Ok");
         }
+        private async void imgInfoPlan(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+
+
 
     }
 }
