@@ -31,5 +31,20 @@ namespace MobilePlanner.Persistence
         {
             _dbContext.SaveChanges();
         }
+
+        public void UpdatePlanner(Planner planner)
+        {
+            //
+        }
+
+        public void DeletePlanner(Planner planner)
+        {
+            if (planner == null)
+            {
+                throw new ArgumentNullException(nameof(planner));
+
+            }
+            _dbContext.Remove(planner);
+        }
     }
 }

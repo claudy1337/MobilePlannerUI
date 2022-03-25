@@ -2,7 +2,7 @@
 
 namespace MobilePlanner.WebApi.Dtos
 {
-    public class PlannerCreateDto
+    public class PlannerUpdateDto
     {
         [Required]
         [MaxLength(250)]

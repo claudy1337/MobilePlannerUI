@@ -10,6 +10,7 @@ namespace MobilePlanner.WebApi.Mapping
         {
             CreateMap<Planner, PlannerReadDto>().ReverseMap();
             CreateMap<PlannerCreateDto, Planner>().ReverseMap();
+            CreateMap<PlannerUpdateDto, Planner>().ReverseMap();
         }
 
     }

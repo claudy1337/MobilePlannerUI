@@ -8,5 +8,7 @@ namespace MobilePlanner.Application.Interfaces
         IEnumerable<Planner> GetAllPlanners();
         Planner GetPlannerById(int id);
         void CreatePlanner(Planner planner);
+        void UpdatePlanner(Planner plannerModelFromRepository);
+        void DeletePlanner(Planner planner);
     }
 }

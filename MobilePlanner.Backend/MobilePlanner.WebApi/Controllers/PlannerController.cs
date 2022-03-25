@@ -11,9 +11,9 @@ namespace MobilePlanner.WebApi.Controllers
     [Route("api/[controller]")]
     public class PlannerController : ControllerBase
     {
-        public PlannerController(IPlannerRepository plannerRepository, IMapper mapper) => 
-                (_plannerRepository, _mapper) = (plannerRepository, mapper); 
-        
+        public PlannerController(IPlannerRepository plannerRepository, IMapper mapper) =>
+                (_plannerRepository, _mapper) = (plannerRepository, mapper);
+
         private readonly IPlannerRepository _plannerRepository;
         private readonly IMapper _mapper;
 
@@ -28,13 +28,13 @@ namespace MobilePlanner.WebApi.Controllers
         [HttpGet("{id}", Name = "GetPlannerById")]
         public ActionResult<PlannerReadDto> GetPlannerById(int id)
         {
-            var planner =  _plannerRepository.GetPlannerById(id);
+            var planner = _plannerRepository.GetPlannerById(id);
             if (planner != null)
             {
-                return Ok(_mapper.Map<PlannerReadDto>(planner)); 
+                return Ok(_mapper.Map<PlannerReadDto>(planner));
             }
             return NotFound();
-      
+
         }
 
         [HttpPost]
@@ -45,8 +45,41 @@ namespace MobilePlanner.WebApi.Controllers
             _plannerRepository.SaveChanges();
 
             var plannerReadDto = _mapper.Map<PlannerReadDto>(plannerModel);
-            return CreatedAtRoute(nameof(GetPlannerById), new { Id = plannerReadDto.Id}, plannerReadDto);
+            return CreatedAtRoute(nameof(GetPlannerById), new { Id = plannerReadDto.Id }, plannerReadDto);
 
-        } 
+        }
+
+        [HttpPut]
+        public ActionResult UpdatePlanner(int id, PlannerUpdateDto plannerUpdateDto)
+        {
+            var plannerModelFromRepository = _plannerRepository.GetPlannerById(id);
+            if (plannerModelFromRepository == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(plannerUpdateDto, plannerModelFromRepository);
+
+            _plannerRepository.UpdatePlanner(plannerModelFromRepository);
+
+            _plannerRepository.SaveChanges();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+
+        public ActionResult DeletePlanner(int id)
+        {
+            var plannerModelFromRepository = _plannerRepository.GetPlannerById(id);
+            if (plannerModelFromRepository == null)
+            {
+                return NotFound();
+            }
+
+            _plannerRepository.DeletePlanner(plannerModelFromRepository);
+            _plannerRepository.SaveChanges();
+
+            return NoContent();
+        }
     }
 }
