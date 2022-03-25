@@ -37,5 +37,25 @@ namespace PropertyApp
         {
             await Navigation.PushAsync(new CreatePlan());
         }
+      
+        private async void imgEditPlan(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditPlan());
+        }
+        private void imgMorePlan(object sender, EventArgs e)
+        {
+            DisplayAlert("More", $"{"Name: " + Property.Name + "\nDate:" + Property.Date}" , "Close");
+            
+        }
+        private void imgNotificationPlan(object sender, EventArgs e)
+        {
+            
+            DisplayAlert("New Notification", "ZZ ONE LOVE", "Close");
+        }
+        private async void imgDeletePlan(object sender, EventArgs e)
+        {
+            bool result = await DisplayAlert("Delete", $"Delete in {Property.Name}", "Yep", "Nope");
+            await DisplayAlert("Notification", "Result: " + (result ? "Deleted" : "Removal"), "OK");
+        }
     }
 }

@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Image Aspect="AspectFill" Source="{Binding Property.Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" st:Transition.Name="PropertyImage"/>
-        <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="back.png" Margin="25" WidthRequest="20" HeightRequest="13" 
+        <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="backPage.png" Margin="25" WidthRequest="30" HeightRequest="23" 
                      HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
         
         <pv:PancakeView x:Name="DetailsView" Grid.Row="1" CornerRadius="30,30,0,0" Padding="35,35,35,0" Margin="0,-40,0,0" 
@@ -38,7 +38,11 @@
 
                         <StackLayout Orientation="Horizontal" Spacing="15">
                             <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Image WidthRequest="36" Source="notification.png"/>
+                                <Image WidthRequest="36" Source="notification.png" x:Name="notification">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="imgNotificationPlan"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <Label Text="Notification" Margin="0,5,0,0" FontSize="17" FontFamily="ThemeFontRegular" TextColor="#707070"/>
                             </StackLayout>
 
@@ -58,19 +62,31 @@
                         </StackLayout>
                         <StackLayout>
                             <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
-                                <Image HeightRequest="60" WidthRequest="60" Source="edit.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Image HeightRequest="60" WidthRequest="60" Source="editB.png" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="imgEditPlan"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </pv:PancakeView>
                             <Label Text="Edit" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
                         </StackLayout>
                         <StackLayout>
                             <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
-                                <Image WidthRequest="50" HeightRequest="50" Source="remove.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Image WidthRequest="50" HeightRequest="50" Source="remove.png" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="imgDeletePlan"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </pv:PancakeView>
                             <Label Text="Deleted" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
                         </StackLayout>
                         <StackLayout>
                             <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
-                                <Image WidthRequest="16" HeightRequest="16" Source="more.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Image WidthRequest="16" HeightRequest="16" Source="more.png" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="imgMorePlan"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </pv:PancakeView>
                             <Label Text="More" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
                         </StackLayout>

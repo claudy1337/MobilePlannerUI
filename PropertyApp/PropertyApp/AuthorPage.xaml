@@ -2,10 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PropertyApp.AuthorPage"
-             NavigationPage.HasNavigationBar="False">
-   
-        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-            <Image Source="{Binding img}" HeightRequest="100" WidthRequest="100"/>
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="back.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="backPage.png" Margin="25" WidthRequest="30" HeightRequest="23" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
         </StackLayout>
-   
+        
+        <StackLayout Grid.Row="0">
+            <Image Source="author.png"/>
+        </StackLayout>
+    </Grid>
+    
+    
 </ContentPage>
