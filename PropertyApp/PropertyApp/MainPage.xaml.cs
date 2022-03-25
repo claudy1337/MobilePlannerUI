@@ -130,7 +130,7 @@ namespace PropertyApp
             }
             else if(TitleTxt.Text == "THEME")
             {
-                TitleTxt.Text = "PLAN";
+                await Navigation.PushAsync(new Theme());
             }
         }
 
