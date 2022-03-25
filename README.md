@@ -17,4 +17,4 @@ visual bd
 | EndHours | end of the time plan |
 
 
-![f1](https://ie.wampi.ru/2022/03/14/author.png)
+![f1](https://ie.wampi.ru/2022/03/25/author.png)
