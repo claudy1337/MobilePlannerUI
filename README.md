@@ -18,3 +18,5 @@ visual bd
 
 
 ![f1](https://ie.wampi.ru/2022/03/25/author.png)
+![f1](https://ie.wampi.ru/2022/03/26/IZOBRAZENIE_2022-03-26_005520.png)
+![f1](https://ia.wampi.ru/2022/03/26/IZOBRAZENIE_2022-03-26_005614.png)
