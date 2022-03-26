@@ -42,7 +42,7 @@
                     </StackLayout>
                     
                     <StackLayout HorizontalOptions="Center" Grid.Row="2" Margin="-70,40,0,20">
-                        <Editor x:Name="DetailsChoise" Placeholder="Details" FontSize="22" FontFamily="NunitoSans-SemiBold.ttf" MaxLength="80" WidthRequest="240" HeightRequest="200"/>
+                        <Editor x:Name="DetailsChoise" Placeholder="Details" FontSize="22" FontFamily="NunitoSans-SemiBold.ttf" MaxLength="100" WidthRequest="240" HeightRequest="200"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" VerticalOptions="End" Margin="0,0,0,30">

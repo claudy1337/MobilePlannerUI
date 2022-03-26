@@ -4,11 +4,14 @@
              x:Class="PropertyApp.Theme"
              BackgroundImageSource="theme.png"
              NavigationPage.HasNavigationBar="False">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="backPage.png" Margin="25" WidthRequest="30" HeightRequest="23" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
+   
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Switch>
+            
+        </Switch>
+    </StackLayout>
+    </StackLayout>
 </ContentPage>
